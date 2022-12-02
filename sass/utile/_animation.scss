@@ -1,0 +1,25 @@
+@keyframes heart{
+    from{
+        opacity: 0;
+        color: $color-secondary;
+
+    }
+    30%{
+        font-weight: 800;
+
+    }
+    to{
+        opacity: 1;
+        color: $color-secondary;
+        font-weight: 800;
+    }
+}
+@keyframes checkk {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+

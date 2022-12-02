@@ -1,0 +1,204 @@
+body {
+    margin: 0 auto;
+}
+
+//header
+.heading {
+
+
+    .arrow {
+        font-size: 23px;
+        position: absolute;
+        top: 43px;
+        left: 42px;
+
+        @include mobile-only {
+            top: 31px;
+
+        }
+    }
+
+    h1 {
+        font-family: $font-title ;
+        text-align: center;
+        font-weight: 400;
+        font-size: $size-h1-D;
+
+        @include mobile-only {
+            font-size: $size-h1;
+        }
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 289px;
+
+    }
+}
+
+//menu
+.Menu {
+    margin: auto;
+    position: relative;
+    background-color: #F6F6F6;
+    width: 74%;
+
+    @include mobile-only {
+        width: 100%;
+        margin: 0;
+    }
+
+    .title1 {
+        background-color: $background-button;
+        border-radius: 30px 30px 0 0;
+        position: absolute;
+        margin-top: -75px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 20px;
+
+        @include mobile-only {
+            padding: 0 20px 0 20px;
+            margin-top: -84px;
+            justify-content: space-between;
+        }
+
+        h2 {
+            font-family: $font-title;
+            font-weight: 100;
+
+            @include mobile-only {
+                font-size: $size-h2 !important;
+            }
+        }
+
+    .sizi {
+        margin-top: 25px;
+        margin-left: 24px;
+        font-size: 25px;
+
+        @include mobile-only {
+            margin-top: 30px;
+        }
+        &:hover {
+            animation: heart 1s forwards;
+        }
+    }
+    }
+
+
+    //liste plats et entrées et desserts
+    &__Entrees--title2 {
+        width: 70%;
+        margin: auto;
+        @include tablet-only {
+            width: 80%;
+        }
+            @include mobile-only {
+                width: 90%;
+                
+            }
+        h3 {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 16px;
+           /* margin-left: 18px;*/
+            border-bottom: 5px solid #99E2D0;
+            width: 43px;
+        }
+
+        ul {
+            margin-left: -38px;
+            li {
+                background-color: white;
+                overflow: hidden;
+                border-radius: 20px;
+                list-style-type: none;
+                display: flex;
+                /*margin: auto;
+                /* justify-content: space-between; */
+                margin-bottom: 17px;
+                /* padding: 2px 0 8px 15px; */
+                box-shadow: 1px 3px 7px 5px #d2d2d2;
+
+
+                .visible {
+                    overflow: hidden;
+                   padding: 5px;
+
+
+                    h4 {
+                        margin: 10px 0 0 5px;
+                        font-size: $size-h3p;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    p {
+
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                                }
+                
+                                span {
+                                    margin-left: auto;
+                                    display: flex;
+                                    align-items: center;
+                                    padding: 15px 15px 0 0;
+                
+                
+                                }
+
+                .hidden {
+                    width: 4em;
+                    height: 80px;
+                    background-color: $color-tertiary;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 0 20px 20px 0;
+                    margin-right: -4em;
+                    overflow: hidden;
+                    transition: margin-right 0.5s;
+
+                    .checkk {
+                        margin-left: 13px;
+                        font-size: 20px;
+                        background: white;
+                        color: $color-tertiary;
+                        width: 1.5em;
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        justify-content: center;
+                        display: flex;
+                        align-items: center;
+                        
+                        
+                        }
+                }
+                    &:hover .hidden{
+                        margin-right:0;
+                       
+                        }
+                        i:hover{
+                        animation: checkk 0.5s ease-in-out;
+                        }
+                }
+
+            }
+        }
+    
+
+    //bouton de commande
+    .bouton {
+        text-align: center;
+        justify-content: center;
+
+    }
+}

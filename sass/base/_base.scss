@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    font-family: $font-text-content;
+    font-style: normal;
+
+}
+
+i {
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+p {
+    margin: 5px;
+    font-size: $size-p ;
+    font-weight: 300;
+}
