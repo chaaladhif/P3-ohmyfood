@@ -67,10 +67,6 @@ body {
             flex-direction: column;
         }
 
-        @include tablet-only {}
-
-
-
         li {
             /*width: 31%;*/
             margin-right: 65px;
@@ -122,7 +118,7 @@ body {
 
             &:hover {
                 background-color: #F5EDFF;
-                box-shadow: 5px 5px 5px 5px $background-primary;
+                box-shadow: 1px 3px 7px 5px $background-primary;
             }
 
             .colori {
