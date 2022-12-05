@@ -1,28 +1,30 @@
 body {
     margin: 0 auto;
 }
-.loader{
+
+.loader {
     position: fixed;
     background-color: black;
-    height:100vh;
-    inset:0;
+    height: 100vh;
+    inset: 0;
     z-index: 1;
     opacity: 1;
     text-align: center;
     display: flex;
     justify-content: center;
     animation: loader 2s both;
-    
 
-    h1{
+
+    h1 {
         position: relative;
-        top:25vh;
+        top: 25vh;
         font-family: $font-title ;
         animation: pulse 5s linear infinite;
 
     }
-    i{
-       /* font-size: 50px;*/
+
+    i {
+        /* font-size: 50px;*/
         color: white;
         animation: rotation 2s forwards;
     }
@@ -52,7 +54,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        
+
     }
 }
 
@@ -144,9 +146,10 @@ body {
             }
 
             &:hover {
-                .colori{
+                .colori {
                     color: $color-primary;
                 }
+
                 background-color: #F5EDFF;
                 box-shadow: 1px 3px 7px 5px $background-primary;
             }
@@ -156,7 +159,7 @@ body {
                 font-size: 20px;
                 margin-left: 15px;
 
-               /* &:hover {
+                /* &:hover {
                     color: $color-primary;
 
                 }*/
@@ -238,6 +241,7 @@ body {
 
                 &--text {
                     position: relative;
+
                     h3 {
                         margin: 0;
                     }
@@ -246,7 +250,7 @@ body {
                 i {
                     font-size: 25px;
                     margin-top: 0;
-                    
+
                 }
 
                 .fa-solid {
