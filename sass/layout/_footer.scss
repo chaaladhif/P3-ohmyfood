@@ -35,6 +35,9 @@ footer {
         li {
 
             margin-left: 20px;
+            a{
+                color: white;
+            }
 
             @include mobile-only {
                 margin-bottom: 5px;

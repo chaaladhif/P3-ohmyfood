@@ -156,6 +156,9 @@ footer ul {
 footer ul li {
   margin-left: 20px;
 }
+footer ul li a {
+  color: white;
+}
 @media screen and (max-width: 767px) {
   footer ul li {
     margin-bottom: 5px;
@@ -267,7 +270,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .choice ol li {
-    width: 87%;
+    width: 94%;
   }
 }
 @media screen and (max-width: 992px) and (min-width: 768px) {
@@ -312,10 +315,6 @@ body {
   color: #7E7E7E;
   font-size: 20px;
   margin-left: 15px;
-  /* &:hover {
-      color: $color-primary;
-
-  }*/
 }
 
 .list {
@@ -573,7 +572,7 @@ body {
   background: white;
   color: #99E2D0;
   width: 1.5em;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   justify-content: center;
   display: flex;

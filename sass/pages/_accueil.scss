@@ -101,7 +101,7 @@ body {
             margin-right: 65px;
 
             @include mobile-only {
-                width: 87%;
+                width: 94%;
             }
 
             @include tablet-only {
@@ -158,11 +158,6 @@ body {
                 color: #7E7E7E;
                 font-size: 20px;
                 margin-left: 15px;
-
-                /* &:hover {
-                    color: $color-primary;
-
-                }*/
             }
         }
     }
