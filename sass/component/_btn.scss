@@ -4,7 +4,8 @@
     margin-top: 15px;
     margin-bottom: 20px;
     &:hover{
-        background-color: lighten($background-button, 20%);
+        background-color: lighten($background-button, 50%);
+        opacity: 0.9;
         box-shadow: 0px 3px 3px 2px $background-primary;
 }
 }

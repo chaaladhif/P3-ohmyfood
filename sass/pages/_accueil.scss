@@ -1,6 +1,33 @@
 body {
     margin: 0 auto;
 }
+.loader{
+    position: fixed;
+    background-color: black;
+    height:100vh;
+    inset:0;
+    z-index: 1;
+    opacity: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    animation: loader 2s both;
+    
+
+    h1{
+        position: relative;
+        top:25vh;
+        font-family: $font-title ;
+        animation: pulse 5s linear infinite;
+
+    }
+    i{
+       /* font-size: 50px;*/
+        color: white;
+        animation: rotation 2s forwards;
+    }
+
+}
 
 /*header*/
 .heading {
@@ -117,6 +144,9 @@ body {
             }
 
             &:hover {
+                .colori{
+                    color: $color-primary;
+                }
                 background-color: #F5EDFF;
                 box-shadow: 1px 3px 7px 5px $background-primary;
             }
@@ -126,10 +156,10 @@ body {
                 font-size: 20px;
                 margin-left: 15px;
 
-                &:hover {
+               /* &:hover {
                     color: $color-primary;
 
-                }
+                }*/
             }
         }
     }

@@ -74,18 +74,19 @@ body {
             }
         }
 
-    .sizi {
-        margin-top: 25px;
-        margin-left: 24px;
-        font-size: 25px;
+        .sizi {
+            margin-top: 25px;
+            margin-left: 24px;
+            font-size: 25px;
 
-        @include mobile-only {
-            margin-top: 30px;
+            @include mobile-only {
+                margin-top: 30px;
+            }
+
+            &:hover {
+                animation: heart 1s forwards;
+            }
         }
-        &:hover {
-            animation: heart 1s forwards;
-        }
-    }
     }
 
 
@@ -93,24 +94,30 @@ body {
     &__Entrees--title2 {
         width: 70%;
         margin: auto;
+        animation: progress 3s forwards;
+
         @include tablet-only {
             width: 80%;
         }
-            @include mobile-only {
-                width: 90%;
-                
-            }
+
+        @include mobile-only {
+            width: 90%;
+
+        }
+
         h3 {
             text-transform: uppercase;
             font-weight: 300;
             font-size: 16px;
-           /* margin-left: 18px;*/
+            /* margin-left: 18px;*/
             border-bottom: 5px solid #99E2D0;
             width: 43px;
         }
 
         ul {
             margin-left: -38px;
+            
+
             li {
                 background-color: white;
                 overflow: hidden;
@@ -122,11 +129,12 @@ body {
                 margin-bottom: 17px;
                 /* padding: 2px 0 8px 15px; */
                 box-shadow: 1px 3px 7px 5px $background-primary;
+                animation: scaly 2s both;
 
 
                 .visible {
                     overflow: hidden;
-                   padding: 5px;
+                    padding: 5px;
 
 
                     h4 {
@@ -143,16 +151,16 @@ body {
                         overflow: hidden;
                         text-overflow: ellipsis;
                     }
-                                }
-                
-                                span {
-                                    margin-left: auto;
-                                    display: flex;
-                                    align-items: center;
-                                    padding: 15px 15px 0 0;
-                
-                
-                                }
+                }
+
+                span {
+                    margin-left: auto;
+                    display: flex;
+                    align-items: center;
+                    padding: 15px 15px 0 0;
+
+
+                }
 
                 .hidden {
                     width: 4em;
@@ -166,6 +174,7 @@ body {
                     margin-right: -4em;
                     overflow: hidden;
                     transition: margin-right 0.5s;
+                    
 
                     .checkk {
                         margin-left: 13px;
@@ -178,22 +187,26 @@ body {
                         justify-content: center;
                         display: flex;
                         align-items: center;
-                        
-                        
-                        }
+
+
+                    }
                 }
-                    &:hover .hidden{
-                        margin-right:0;
-                       
-                        }
-                        i:hover{
-                        animation: checkk 0.5s ease-in-out;
-                        }
+                &:hover .hidden {
+                    margin-right: 0;
+
                 }
 
+                &:hover .fa-solid {
+                    margin-right:0;
+                    transform: rotate(360deg);
+                    transition: 500ms;
+
+                }
             }
+
         }
-    
+    }
+
 
     //bouton de commande
     .bouton {

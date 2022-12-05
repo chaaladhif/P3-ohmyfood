@@ -22,6 +22,49 @@
     transform: rotate(360deg);
   }
 }
+@keyframes progress {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    color: #9356DC;
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 1;
+    color: #FF79DA;
+  }
+  100% {
+    transform: scale(1);
+    color: #99E2D0;
+    opacity: 0.25;
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /*mixin*/
 /*768px) and (max-width : 992px)*/
 * {
@@ -54,6 +97,7 @@ p {
 }
 .btn:hover {
   background-color: white;
+  opacity: 0.9;
   box-shadow: 0px 3px 3px 2px #D2D2D2;
 }
 
@@ -129,6 +173,30 @@ footer ul li i {
 
 body {
   margin: 0 auto;
+}
+
+.loader {
+  position: fixed;
+  background-color: black;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  animation: loader 2s both;
+}
+.loader h1 {
+  position: relative;
+  top: 25vh;
+  font-family: Shrikhand, sans-serif;
+  animation: pulse 5s linear infinite;
+}
+.loader i {
+  /* font-size: 50px;*/
+  color: white;
+  animation: rotation 2s forwards;
 }
 
 /*header*/
@@ -235,15 +303,19 @@ body {
 }
 .choice ol li:hover {
   background-color: #F5EDFF;
-  box-shadow: 5px 5px 5px 5px #D2D2D2;
+  box-shadow: 1px 3px 7px 5px #D2D2D2;
+}
+.choice ol li:hover .colori {
+  color: #9356DC;
 }
 .choice ol li .colori {
   color: #7E7E7E;
   font-size: 20px;
   margin-left: 15px;
-}
-.choice ol li .colori:hover {
-  color: #9356DC;
+  /* &:hover {
+       color: $color-primary;
+
+   }*/
 }
 
 .list {
@@ -424,6 +496,7 @@ body {
 .Menu__Entrees--title2 {
   width: 70%;
   margin: auto;
+  animation: progress 3s forwards;
 }
 @media screen and (max-width: 992px) and (min-width: 768px) {
   .Menu__Entrees--title2 {
@@ -456,7 +529,8 @@ body {
   /* justify-content: space-between; */
   margin-bottom: 17px;
   /* padding: 2px 0 8px 15px; */
-  box-shadow: 1px 3px 7px 5px #d2d2d2;
+  box-shadow: 1px 3px 7px 5px #D2D2D2;
+  animation: scaly 2s both;
 }
 .Menu__Entrees--title2 ul li .visible {
   overflow: hidden;
@@ -508,8 +582,10 @@ body {
 .Menu__Entrees--title2 ul li:hover .hidden {
   margin-right: 0;
 }
-.Menu__Entrees--title2 ul li i:hover {
-  animation: checkk 0.5s ease-in-out;
+.Menu__Entrees--title2 ul li:hover .fa-solid {
+  margin-right: 0;
+  transform: rotate(360deg);
+  transition: 500ms;
 }
 .Menu .bouton {
   text-align: center;
