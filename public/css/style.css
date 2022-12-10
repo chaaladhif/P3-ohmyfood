@@ -194,7 +194,7 @@ body {
   font-size: 4em;
   display: flex;
   align-items: center;
-  animation: pulse 3s 1s infinite;
+  animation: pulse 3s 2s infinite;
 }
 
 /*header*/
