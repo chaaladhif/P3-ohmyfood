@@ -35,11 +35,7 @@
     
 }
 @keyframes loader {
-    0%{
-        transform: scale(1);
-        
-    }
-    100%{
+  to{
         transform: scale(0);
     }
     
@@ -51,7 +47,7 @@
         opacity: 0.25;
     }
     50%{
-        transform: scale(2);
+        transform: scale(1.5);
         opacity: 1;
         color: $color-secondary;
     }

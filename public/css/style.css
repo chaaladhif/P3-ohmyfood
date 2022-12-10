@@ -33,10 +33,7 @@
   }
 }
 @keyframes loader {
-  0% {
-    transform: scale(1);
-  }
-  100% {
+  to {
     transform: scale(0);
   }
 }
@@ -47,7 +44,7 @@
     opacity: 0.25;
   }
   50% {
-    transform: scale(2);
+    transform: scale(1.5);
     opacity: 1;
     color: #FF79DA;
   }
@@ -180,26 +177,24 @@ body {
 
 .loader {
   position: fixed;
-  background-color: black;
+  background-color: white;
+  width: 100%;
   height: 100vh;
   inset: 0;
   z-index: 1;
   opacity: 1;
-  text-align: center;
+  transform-origin: top;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  animation: loader 2s both;
+  animation: loader 200ms 3s forwards;
 }
 .loader h1 {
-  position: relative;
-  top: 25vh;
-  font-family: Shrikhand, sans-serif;
-  animation: pulse 5s linear infinite;
-}
-.loader i {
-  /* font-size: 50px;*/
-  color: white;
-  animation: rotation 2s forwards;
+  text-align: center;
+  font-size: 4em;
+  display: flex;
+  align-items: center;
+  animation: pulse 3s 1s infinite;
 }
 
 /*header*/
