@@ -129,7 +129,7 @@ body {
                 margin-bottom: 17px;
                 /* padding: 2px 0 8px 15px; */
                 box-shadow: 1px 3px 7px 5px $background-primary;
-                animation: scaly 2s both;
+                
 
 
                 .visible {
@@ -172,16 +172,17 @@ body {
                     justify-content: center;
                     border-radius: 0 20px 20px 0;
                     margin-right: -4em;
-                    overflow: hidden;
+                    /*overflow: hidden;*/
                     transition: margin-right 0.5s;
                     
 
                     .checkk {
-                        margin-left: 13px;
+                       /* margin-left: 13px;*/
                         font-size: 20px;
                         background: white;
                         color: $color-tertiary;
                         width: 1.5em;
+                        /*width=height*/
                         aspect-ratio: 1/1;
                         border-radius: 50%;
                         justify-content: center;

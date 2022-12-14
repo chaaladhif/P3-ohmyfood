@@ -558,15 +558,16 @@ body {
   justify-content: center;
   border-radius: 0 20px 20px 0;
   margin-right: -4em;
-  overflow: hidden;
+  /*overflow: hidden;*/
   transition: margin-right 0.5s;
 }
 .Menu__Entrees--title2 ul li .hidden .checkk {
-  margin-left: 13px;
+  /* margin-left: 13px;*/
   font-size: 20px;
   background: white;
   color: #99E2D0;
   width: 1.5em;
+  /*width=height*/
   aspect-ratio: 1/1;
   border-radius: 50%;
   justify-content: center;
