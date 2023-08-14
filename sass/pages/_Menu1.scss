@@ -174,8 +174,6 @@ body {
                     margin-right: -4em;
                     /*overflow: hidden;*/
                     transition: margin-right 0.5s;
-                    
-
                     .checkk {
                        /* margin-left: 13px;*/
                         font-size: 20px;
@@ -188,13 +186,10 @@ body {
                         justify-content: center;
                         display: flex;
                         align-items: center;
-
-
                     }
                 }
                 &:hover .hidden {
                     margin-right: 0;
-
                 }
 
                 &:hover .fa-solid {
