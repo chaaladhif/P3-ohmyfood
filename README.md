@@ -1,4 +1,4 @@
-*************** ![Alt text](<images/Homepage (1).png>) ***************
+![Alt text](<images/Homepage (1).png>)
 # OhmyFood: Projet 3 de Openclassrooms
 * Mettre en oeuvre des effets CSS graphiques avancés
 * Assurer la cohérence graphique d'un site web
