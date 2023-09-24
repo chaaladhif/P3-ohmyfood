@@ -1,33 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-@-webkit-keyframes heart {
-  from {
-    opacity: 0;
-    color: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
-  }
-  30% {
-    font-weight: 800;
-  }
-  to {
-    opacity: 1;
-    color: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
-    font-weight: 800;
-  }
-}
 @keyframes heart {
   from {
     opacity: 0;
-    color: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+    color: #FF79DA;
   }
   30% {
     font-weight: 800;
   }
   to {
     opacity: 1;
-    color: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+    color: #FF79DA;
     font-weight: 800;
   }
 }
+/*@keyframes checkk {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}*/
+@keyframes progress {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes loader {
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    color: #9356DC;
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+    color: #FF79DA;
+  }
+  100% {
+    transform: scale(1);
+    color: #99E2D0;
+    opacity: 0.25;
+  }
+}
+/*@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}*/
 /*mixin*/
 /*768px) and (max-width : 992px)*/
 * {
@@ -60,6 +94,7 @@ p {
 }
 .btn:hover {
   background-color: white;
+  opacity: 0.9;
   box-shadow: 0px 3px 3px 2px #D2D2D2;
 }
 
@@ -118,6 +153,9 @@ footer ul {
 footer ul li {
   margin-left: 20px;
 }
+footer ul li a {
+  color: white;
+}
 @media screen and (max-width: 767px) {
   footer ul li {
     margin-bottom: 5px;
@@ -135,6 +173,28 @@ footer ul li i {
 
 body {
   margin: 0 auto;
+}
+
+.loader {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 1;
+  transform-origin: top;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  animation: loader 5s 5s forwards;
+}
+.loader h1 {
+  text-align: center;
+  font-size: 4em;
+  display: flex;
+  align-items: center;
+  animation: pulse 3s 2s infinite;
 }
 
 /*header*/
@@ -184,7 +244,12 @@ body {
 .choice ol {
   list-style: none;
   counter-reset: li;
+  padding: 0px;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 @media screen and (max-width: 767px) {
   .choice ol {
@@ -205,7 +270,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .choice ol li {
-    width: 87%;
+    width: 94%;
   }
 }
 @media screen and (max-width: 992px) and (min-width: 768px) {
@@ -241,15 +306,15 @@ body {
 }
 .choice ol li:hover {
   background-color: #F5EDFF;
-  box-shadow: 5px 5px 5px 5px #D2D2D2;
+  box-shadow: 1px 3px 7px 5px #D2D2D2;
+}
+.choice ol li:hover .colori {
+  color: #9356DC;
 }
 .choice ol li .colori {
   color: #7E7E7E;
   font-size: 20px;
   margin-left: 15px;
-}
-.choice ol li .colori:hover {
-  color: #9356DC;
 }
 
 .list {
@@ -319,25 +384,27 @@ body {
   padding-bottom: 10px;
   margin: 10px;
 }
+.list__content .card__content--text {
+  position: relative;
+}
 .list__content .card__content--text h3 {
   margin: 0;
 }
-.list__content .card__content .sizi {
+.list__content .card__content i {
   font-size: 25px;
   margin-top: 0;
+}
+.list__content .card__content .fa-solid {
+  position: absolute;
+  right: 10px;
   color: transparent;
-  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  background-image: linear-gradient(200.64deg, #FF79DA -5.2%, #9356DC 110.74%);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 200ms ease-in-out;
-  /* i{
-       transition: translateY(-50%);*/
 }
-.list__content .card__content .sizi:hover {
-  /* animation: heart 1000ms forwards;*/
+.list__content .card__content .fa-solid:hover {
   opacity: 1;
-  transform: scale(1.2);
 }
 .list__content:hover {
   box-shadow: 5px 5px 5px #D2D2D2;
@@ -347,8 +414,16 @@ body {
   margin: 0 auto;
 }
 
-.heading i {
-  font-size: 18px;
+.heading .arrow {
+  font-size: 23px;
+  position: absolute;
+  top: 43px;
+  left: 42px;
+}
+@media screen and (max-width: 767px) {
+  .heading .arrow {
+    top: 31px;
+  }
 }
 .heading h1 {
   font-family: Shrikhand, sans-serif;
@@ -407,9 +482,9 @@ body {
   }
 }
 .Menu .title1 .sizi {
-  font-size: 25px;
-  margin-top: 26px;
+  margin-top: 25px;
   margin-left: 24px;
+  font-size: 25px;
 }
 @media screen and (max-width: 767px) {
   .Menu .title1 .sizi {
@@ -417,41 +492,49 @@ body {
   }
 }
 .Menu .title1 .sizi:hover {
-  /*animation: heart 1000ms forwards;*/
+  animation: heart 1s forwards;
 }
 .Menu__Entrees--title2 {
+  width: 70%;
   margin: auto;
+  animation: progress 3s forwards;
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .Menu__Entrees--title2 {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .Menu__Entrees--title2 {
+    width: 90%;
+  }
 }
 .Menu__Entrees--title2 h3 {
   text-transform: uppercase;
   font-weight: 300;
   font-size: 16px;
-  margin-left: 18px;
+  /* margin-left: 18px;*/
   border-bottom: 5px solid #99E2D0;
   width: 43px;
 }
 .Menu__Entrees--title2 ul {
-  margin-right: 18px;
-  margin-left: -22px;
+  margin-left: -38px;
 }
 .Menu__Entrees--title2 ul li {
   background-color: white;
-  width: 63%;
+  overflow: hidden;
   border-radius: 20px;
   list-style-type: none;
   display: flex;
-  margin: auto;
+  /*margin: auto;
   /* justify-content: space-between; */
   margin-bottom: 17px;
   /* padding: 2px 0 8px 15px; */
-  position: relative;
-  box-shadow: 1px 3px 7px 5px #d2d2d2;
+  box-shadow: 1px 3px 7px 5px #D2D2D2;
 }
 .Menu__Entrees--title2 ul li .visible {
-  margin: 1px;
   overflow: hidden;
-  width: 100%;
-  padding: 10px;
+  padding: 5px;
 }
 .Menu__Entrees--title2 ul li .visible h4 {
   margin: 10px 0 0 5px;
@@ -466,24 +549,44 @@ body {
   text-overflow: ellipsis;
 }
 .Menu__Entrees--title2 ul li span {
-  position: absolute;
-  right: 26px;
-  top: 39px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding: 15px 15px 0 0;
 }
 .Menu__Entrees--title2 ul li .hidden {
-  width: 72px;
-  height: 100px;
+  width: 4em;
+  height: 80px;
   background-color: #99E2D0;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 0 20px 20px 0;
-  margin-right: -75px;
-  transition: margin-right 1s;
+  margin-right: -4em;
+  /*overflow: hidden;*/
+  transition: margin-right 0.5s;
 }
-.Menu__Entrees--title2 ul li .hidden .checkk:hover {
+.Menu__Entrees--title2 ul li .hidden .checkk {
+  /* margin-left: 13px;*/
+  font-size: 20px;
+  background: white;
+  color: #99E2D0;
+  width: 1.5em;
+  /*width=height*/
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.Menu__Entrees--title2 ul li:hover .hidden {
+  margin-right: 0;
+}
+.Menu__Entrees--title2 ul li:hover .fa-solid {
+  margin-right: 0;
   transform: rotate(360deg);
+  transition: 500ms;
 }
 .Menu .bouton {
   text-align: center;

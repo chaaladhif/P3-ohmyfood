@@ -79,42 +79,63 @@ body {
 
 // bloc choice
 .choice {
-    h2 {
-        margin-left: 44px;
+    margin-left: 4em;
+    @include mobile-only{
+        margin-left: 0;
     }
-
+   h2 {
+        margin-left: 3em;
+        @include tablet-only {
+            margin-left: 0;
+    }
+    @include mobile-only{
+        margin-left: 1.4em;
+    }
+   }
     ol {
         list-style: none;
         counter-reset: li;
+        padding: 0px;
         display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 30px;
+         
 
         @include mobile-only {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+        }
+        @include tablet-only{
+            gap: 15px;
+            justify-content: revert;
         }
 
         li {
             /*width: 31%;*/
-            margin-right: 65px;
-
+            // margin-right: 65px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 24%;
             @include mobile-only {
-                width: 94%;
+                width: 80%;
             }
 
             @include tablet-only {
-                width: 32%;
-                margin-right: 18px;
+                width: 31%;
+                padding: 0;
                 background-color: #F6F6F6;
-                padding: 20px 0 0 0;
-                /*margin-bottom: 24px;*/
-                font-size: 14px;
+                font-size: 13px;
             }
 
             background-color: $background-button;
             padding: 20px;
             border-radius: 20px;
             height: 75px;
-            margin-bottom: 24px;
+            // margin-bottom: 24px;
             font-size: $size-btn;
             font-weight: 500;
 
@@ -125,14 +146,17 @@ body {
                 margin-left: -2em;
                 height: 13px;
                 width: 12px;
-                padding: 4px 3px 5px 5px;
+                padding: 5px;
+                text-align: center;
                 font-size: 14px;
                 background-color: $color-primary;
                 border-radius: 100%;
 
                 @include tablet-only {
-                    margin-left: -10px;
-                    height: 30%;
+                    margin-left: -6px;
+                    height: 14px;
+                    width: 12px;
+                    padding: 4px;
                 }
 
             }
@@ -155,6 +179,10 @@ body {
                 color: #7E7E7E;
                 font-size: 20px;
                 margin-left: 15px;
+                @include tablet-only{
+                    font-size: 15px;
+    margin-left: 11px;
+                }
             }
         }
     }
@@ -166,21 +194,30 @@ body {
 
     h2 {
         padding-top: 30px;
-        margin-left: 43px;
+        margin-left: 5.6em;
+        @include tablet-only{
+            margin-left: 3em;
+        }
+        @include mobile-only{
+            margin-left: 1.6em;
+        }
     }
 
     &__content {
-        margin: 20px;
+        margin-left: 7em;
         padding-bottom: 15px;
+        flex-wrap: wrap;
         display: flex;
 
         @include mobile-only {
             display: flex;
             flex-direction: column;
+            margin-left: 0;
         }
 
         @include tablet-only {
-            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-left: 0;
         }
 
         .card {
@@ -189,18 +226,19 @@ body {
             background-color: #fff;
             margin-bottom: 20px;
             position: relative;
-            width: 24%;
+            width: 46%;
             margin-left: 21px;
             height: 262px;
             box-shadow: 2px 4px 3px 2px $background-primary;
 
             @include mobile-only {
-                width: 100%;
-                margin-left: 0;
+                width: 83%;
+                margin: 1em auto;
             }
 
             @include tablet-only {
-                width: 47%;
+                width: 36%;
+                margin-left: 0;
             }
 
 

@@ -58,6 +58,7 @@ body {
         display: flex;
         justify-content: center;
         padding-left: 20px;
+        padding-bottom: 0.5em;
 
         @include mobile-only {
             padding: 0 20px 0 20px;
@@ -94,6 +95,7 @@ body {
     &__Entrees--title2 {
         width: 70%;
         margin: auto;
+        padding-top: 0.15em;
         animation: progress 3s forwards;
 
         @include tablet-only {
